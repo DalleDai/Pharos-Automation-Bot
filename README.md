@@ -62,18 +62,26 @@ pip install -r requirements.txt
 
 3. **Add Your Keys & Proxies**
 
-`accounts.txt`:
+The repo ships only example files. Create your own local copies (they are listed in `.gitignore`, so Git will not track them):
+```bash
+cp accounts.example.txt accounts.txt
+cp proxy.example.txt proxy.txt
+```
+
+Then edit `accounts.txt` (one private key per line):
 ```
 your_private_key_1
 your_private_key_2
 ```
 
-`proxy.txt` (multiple formats supported):
+and `proxy.txt` (multiple formats supported):
 ```
 127.0.0.1:8080
 http://user:pass@127.0.0.1:8080
 socks5://127.0.0.1:1080
 ```
+
+> **Security:** Never commit `accounts.txt` or put real private keys in any file you push. Use a throwaway wallet with only testnet funds. If you fork this repo, check `git status` before every commit.
 
 4. **Special Configurations**
 - For Faroswap BOT: Update `pools.json` with pool addresses
