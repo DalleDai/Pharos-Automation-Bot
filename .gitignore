@@ -1,0 +1,5 @@
+# Local secrets and proxies: never commit real values.
+# Copy accounts.example.txt -> accounts.txt and proxy.example.txt -> proxy.txt
+accounts.txt
+proxy.txt
+.env
